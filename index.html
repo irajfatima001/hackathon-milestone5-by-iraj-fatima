@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>SHAREABLE RESUME BUILDER:</h1>
+    <form id="resumeForm">
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <label for="username"> Username: </label>
+        <input type="text" id="username" name="username" required /><br />
+
+        <label for="name">Name: </label><br />
+        <input type="text" id="name" name="name" required /><br />
+
+        <label for="email">Email: </label><br />
+        <input type="email" id="email" name="email" required /><br />
+
+        <label for="Contact">Contact:</label><br />
+        <input type="tel" id="contact" name="contact" required /><br />
+
+        <label for="address">Address:</label><br />
+        <input type="address" id="address" name="address" required /><br />
+      </fieldset>
+
+      <fieldset>
+        <legend>Education</legend>
+        <label for="education">Education:</label><br />
+        <textarea id="education" name="education" rows="3" required></textarea
+        ><br />
+      </fieldset>
+
+      <fieldset>
+        <legend>Work Experience</legend>
+        <label for="experience">Work Experience:</label><br />
+        <textarea id="experience" name="experience" rows="3" required></textarea
+        ><br />
+      </fieldset>
+
+      <fieldset>
+        <legend>Projects</legend>
+        <label for="projects">Projects:</label><br />
+        <textarea id="projects" name="projects" rows="3" required></textarea
+        ><br />
+      </fieldset>
+
+      <fieldset>
+        <legend>Certifications</legend>
+        <label for="certifications">Certifications:</label><br />
+        <textarea
+          id="certifications"
+          name="certifications"
+          rows="3"
+          required
+        ></textarea
+        ><br />
+      </fieldset>
+
+      <fieldset>
+        <legend>Skills</legend>
+        <label for="skills">Skills:</label><br />
+        <textarea id="skills" name="skills" rows="3" required></textarea><br />
+      </fieldset>
+      <br />
+
+      <button type="submit"><b>Generate Resume</b></button>
+    </form>
+    <div id="resume-display" contenteditable="true"></div>
+    <div id="shareable-link-container" style="display: none">
+      <h2>Shareable Link</h2>
+      <p>Here is your unique link to view or edit your resume:</p>
+      <a href="#" id="shareable-link" target="_blank"></a>
+      <br />
+      <button id="download-pdf"><b>Download as PDF</b></button>
+    </div>
+
+    <br />
+    <script src="main.js"></script>
+  </body>
+</html>
